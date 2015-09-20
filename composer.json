@@ -1,0 +1,16 @@
+{
+    "name": "ccbsti/skeleton",
+    "description": "Esqueleto básico para aplicações PHP da STI/CCB",
+    "type": "project",
+    "require": {
+        "slim/slim": "^2.6",
+        "petebrowne/slim-layout-view": "^0.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Roger Risson da Silva",
+            "email": "rogerrisson@gmail.com"
+        }
+    ]
+}
