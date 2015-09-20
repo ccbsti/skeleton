@@ -89,6 +89,6 @@ class reconfig
 		$json->authors[0]->email = $authorMail;
 		$json->license = $license;
 
-		file_put_contents('teste.json', json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));		
+		file_put_contents('composer.json', json_encode($json, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
 	}
 }
