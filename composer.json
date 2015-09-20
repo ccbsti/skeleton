@@ -10,7 +10,15 @@
     "authors": [
         {
             "name": "Roger Risson da Silva",
-            "email": "rogerrisson@gmail.com"
+            "email": "roger-risson@bm.rs.gov.br"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "bin\\": "bin/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": ["bin\\reconfig::run"]
+    }
 }
