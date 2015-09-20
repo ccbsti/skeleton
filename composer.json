@@ -15,7 +15,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "bin\\": "bin/"
+            "bin\\": "bin/",
+            "Application\\Controller\\": "controllers/"
         }
     },
     "scripts": {
