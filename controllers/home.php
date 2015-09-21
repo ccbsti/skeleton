@@ -16,6 +16,7 @@ class Home
 		$vars = [
 			'title' => "Hello World!",
 			'packageName' => "ccbsti / skeleton",
+			'description' => 'Um esqueleto básico para aplicações Web...',
 			'authorName' => "Roger Risson da Silva",
 			'menu' => [
 				'Home' => '/',
