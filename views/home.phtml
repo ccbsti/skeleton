@@ -1,0 +1,25 @@
+<h1>Bem vindo ao seu novo projeto</h1>
+<p>Olá <?=$authorName?>, este é a visualização inical do seu novo projeto.</p>
+<p>
+Se precisar de mais informações sobre como customizá-lo por favor de uma olhada na seção <b>DOCS</b>,
+ela na verdade é a visualização dos arquivos markdown existentes na pasta docs. Estes arquivos estão 
+organizados de modo a trazer o máximo de informação em como customizar esta estrutura inicial. Além
+de servir de modelo para como você deve organizar a documentação do projeto que você está começando 
+agora.
+</p>
+<p>
+Sei que você é uma pessoa ocupada então tomei a liberdade de realizar algumas checagens no ambiente
+que você está rodando o seu projeto, os resultados estão logo abaixo:
+</p>
+<table class="info">
+	<tr class="header">
+		<td>Checagem</td>
+		<td>Resultado</td>
+	</tr>
+	<?php 
+		foreach ($checkList as $check => $result) {
+			echo "<tr>\n\t<td>$check</td>\n\t<td>$result</td>\n</tr>\n";
+		}
+	?>
+</table>
+
