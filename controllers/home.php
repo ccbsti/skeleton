@@ -7,6 +7,10 @@ namespace Application\Controller;
 */
 class Home
 {
+
+
+	private $json = null;
+
 	/** Hello World Action */
 	public function home()
 	{
@@ -15,9 +19,9 @@ class Home
 
 		$vars = [
 			'title' => "Hello World!",
-			'packageName' => "ccbsti / skeleton",
-			'description' => 'Um esqueleto básico para aplicações Web...',
-			'authorName' => "Roger Risson da Silva",
+			'packageName' => $this->getPackage(),
+			'description' => $this->getDescription(),
+			'authorName' =>  $this->getAuthorName(),
 			'menu' => [
 				'Home' => '/',
 				'Documentação' => '/docs'
@@ -67,4 +71,16 @@ class Home
 		}
 	}
 
+
+	private function getPackage() { return str_replace('/', ' / ', $this->getJson()->name); }
+	private function getDescription() { return $this->getJson()->description; }
+	private function getLicense() { return $this->getJson()->license; }
+	private function getAuthorName() { return $this->getJson()->authors[0]->name; }
+
+	private function getJson() {
+		if ($this->json === null) $this->json = json_decode(file_get_contents(APP_PATH.'/composer.json'));
+		return $this->json;
+	}
+
 }
+
