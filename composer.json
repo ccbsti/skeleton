@@ -1,5 +1,5 @@
 {
-    "name": "ccbsti/skeleton",
+    "name": "sti/skeleton",
     "description": "Esqueleto básico para aplicações PHP da STI/CCB",
     "type": "project",
     "require": {
