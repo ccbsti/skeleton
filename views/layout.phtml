@@ -1,9 +1,18 @@
+<?php 
+	// The path of the CSS must be changed if the root is unprotected.
+	if ($_SERVER['REQUEST_URI'] != '/') { 
+		$cssPath = "/public/css/layout.css";
+	} else {
+		$cssPath = "/css/layout.css";
+	}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title><?=$title?></title>
-	<link rel="stylesheet" type="text/css" href="/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="<?=$cssPath?>">
+
 </head>
 <body>
 	<div class="header">

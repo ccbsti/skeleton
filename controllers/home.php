@@ -57,6 +57,14 @@ class Home
 		return array('Versão do PHP' => phpversion());
 	}
 
+	private function check_rootProtection() {
+		if ($_SERVER['REQUEST_URI'] == '/') {
+			return array('Raiz protegida?' => '<span class="positive">SIM</span>');
+		} else {
+			return array('Raiz protegida?' => '<span class="negative">NÃO - Sem isto sua aplicação pode não funcionar direito entre outros problemas.</span>');
+		}
+	}
+
 	private function check_modRewrite() {
 		if (in_array('mod_rewrite', apache_get_modules())) {
 			return array('mod_rewrite habilitado?' => '<span class="positive">SIM</span>');
