@@ -2,32 +2,34 @@
 
 namespace Application\Controller;
 
+use \Sti\Database;
+use \Slim\Slim;
+
 /**
 * Hello World Controller
 */
 class Home
 {
 
-
 	private $json = null;
 
 	/** Hello World Action */
 	public function home()
 	{
-		
-		$app = \Slim\Slim::getInstance();
+	
+		$app = Slim::getInstance();
 
-		$vars = [
+		$vars = array(
 			'title' => "Hello World!",
 			'packageName' => $this->getPackage(),
 			'description' => $this->getDescription(),
 			'authorName' =>  $this->getAuthorName(),
-			'menu' => [
+			'menu' => array(
 				'Home' => '/',
 				'Documentação' => '/docs'
-			],
-			'checkList' => []
-		];
+			),
+			'checkList' => array()
+		);
 
 		// Efetua uma série de checagens no ambiente e informa o resultado:
 		$methods = get_class_methods(__CLASS__);
